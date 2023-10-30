@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ data.title }} - Invidious</title>
+    <link href="{{ url_for('static', filename='css/video.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    {% include "navbar.html" %}
+    
+    <!-- I'll implement a proper video player at a later time -->
+    <iframe class="video-player" src="https://{{ instance }}/embed/{{ data.videoId }}" title="Israel-Hamas War: Piers Morgan vs Bassem Youssef On Palestine&#39;s Treatment | The Full Interview" frameborder="0" allowfullscreen></iframe>
+
+  </body>
+</html>
