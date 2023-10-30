@@ -37,3 +37,71 @@ a:active {
 .navbar * {
   display: inline-block;
 }
+
+.navbar {
+  margin: 10px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+hr {
+  color: var(--grey);
+}
+
+.big-button {
+  background: var(--second-bg);
+  color: var(--main-fg);
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid var(--border);
+  cursor: pointer;
+}
+
+.big-button:hover {
+  color: var(--blue);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 20px); /* Account for margin on navbar */
+}
+
+.logo,
+.searchForm,
+.utils {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.searchForm form {
+  width: 100%;
+}
+
+.utils a {
+  margin-left: 10px;
+}
+
+.utils {
+  justify-content: flex-end;
+}
+
+.searchForm input {
+  position: relative;
+  font-size: 20px;
+  width: 100%;
+  height: 20px;
+  background: var(--second-bg);
+  border-radius: 5px;
+  border: 2px solid var(--border);
+  color: var(--main-fg);
+  padding: 5px;
+}
+
+.searchForm input:focus {
+  outline: none;
+}

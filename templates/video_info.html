@@ -1,0 +1,21 @@
+<div class="info">
+  <div id="title">
+    {{ data.title }}
+  </div>
+  <div class="stats">
+    <div class="left-side-stats">
+      <span class="stat" id="views">{{ data.viewCount }} views</span> | 
+      <span class="stat" id="date">{{ data.published }}</span>
+    </div>
+    <div class="right-side-stats">
+      <span class="stat" id="likes">👍 {{ data.likeCount }}</span>
+      <!-- <span class="stat" id="dislikes">👎 {{ data.dislikeCount }}</span> -->
+    </div>
+  </div>
+  <hr>
+  <div class="desc">
+    <button id="closeDesc" class="big-button">Close Description</button>
+    <p class="description">{{ data.descriptionHtml|safe }}</p>
+  </div>
+  <hr>
+</div>

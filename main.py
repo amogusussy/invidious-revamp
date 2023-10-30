@@ -20,14 +20,19 @@ def watch():
 
     instance = "inv.seitan-ayoub.lol"
 
+
     if id == "":
         return "Invalid video ID", 400
     api_request = invidious_api.Video(id, instance)
     data = api_request.get_data()
+    comments = invidious_api.Comments(id, instance)
+    comments = comments.get_comments()
+    print(comments)
+
     return render_template(
         "watch.html",
         data=data,
-        instance=instance
+        instance=instance,
     )
 
 if __name__ == "__main__":
