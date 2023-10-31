@@ -1,0 +1,14 @@
+#comments {
+  /*  */
+}
+
+.comment {
+  background: var(--second-bg);
+  border: 2px solid var(--border);
+  padding: 12px;
+  width: fit-content;
+}
+
+.user-line a {
+  color: var(--blue);
+}

@@ -1,0 +1,18 @@
+<div id="comments">
+  <button id="commentCount" class="big-button">Minimize Comments ({{ comments.commentCount }})</button>
+  {% for comment in comments %}
+  <div class="comment">
+    <div class="authorline">
+      <div class="user-line">
+        <a href="{{ comment.authorUrl }}">{{ comment.author }}</a>
+        {% if comment.verified %}<span class="verified emoji"></span>{% endif %}
+        <span class="comment-date" >{{ comment.publishedText }}</span>
+        {% if comment.isEdited %} (edited) {% endif %}
+      </div>
+      <div class="commentBody">
+        {{ comment.contentHtml|safe }}
+      </div>
+    </div>
+  </div>  
+  {% endfor %}
+</div>

@@ -26,7 +26,3 @@
   text-align: right;
 }
 
-.right-side-stats {
-  color: transparent;  
-  text-shadow: 0 0 0 var(--main-fg);
-}

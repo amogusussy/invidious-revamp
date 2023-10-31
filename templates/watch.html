@@ -4,6 +4,7 @@
     <title>{{ data.title }} - Invidious</title>
     <link href="{{ url_for('static', filename='css/video.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/comments.css') }}" rel="stylesheet">
   </head>
   <body>
     {% include "navbar.html" %}
@@ -11,5 +12,11 @@
     {% include "video_player.html" %}
 
     {% include "video_info.html" %}
+
+    <div id="under">
+      {% include "comments.html" %}
+    </div>
+
+  <script src="{{ url_for('static', filename='javascript/watchUI.js') }}" defer></script>
   </body>
 </html>

@@ -18,7 +18,7 @@ def home():
 def watch():
     id = request.args.get("v", "")
 
-    instance = "inv.seitan-ayoub.lol"
+    instance = "yt.artemislena.eu"
 
 
     if id == "":
@@ -27,11 +27,11 @@ def watch():
     data = api_request.get_data()
     comments = invidious_api.Comments(id, instance)
     comments = comments.get_comments()
-    print(comments)
 
     return render_template(
         "watch.html",
         data=data,
+        comments=comments,
         instance=instance,
     )
 
