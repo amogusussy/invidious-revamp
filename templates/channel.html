@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+
+    <div class="banner">
+      <img src="{{ info.authorBanners[0].url }}" alt="">
+    </div>
+  
+  </body>
+</html>

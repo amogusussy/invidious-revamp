@@ -9,9 +9,15 @@
     </div>
     <div class="right-side-stats">
       <span class="stat emoji" id="likes">👍 {{ data.likeCount }}</span>
-      <!-- <span class="stat" id="dislikes">👎 {{ data.dislikeCount }}</span> -->
     </div>
   </div>
+  <a class="author" href="{{ data.authorUrl }}">
+    <img src="{{ data.authorThumbnails[1].url }}">
+    <span class="author-name">{{ data.author }}</span>
+  </a>
+  <form id="subscribe-button" action="/subscribe">
+    <button type="submit" class="subscribe">Subscribe - {{ data.subCountText }}</button>
+  </form>
   <hr>
   <div class="desc">
     <button id="closeDesc" class="big-button">Minimize Description</button>

@@ -1,7 +1,11 @@
+<button id="commentCount" class="big-button">Minimize Comments ({{ comments.commentCount }})</button>
+<hr>
 <div id="comments">
-  <button id="commentCount" class="big-button">Minimize Comments ({{ comments.commentCount }})</button>
-  {% for comment in comments %}
+  {% for comment in comments.comments %}
   <div class="comment">
+    {% if comment.isPinned %}
+      <div class="pinned"><span class="emoji">📌</span> Pinned</div>
+    {% endif %}
     <div class="authorline">
       <div class="user-line">
         <a href="{{ comment.authorUrl }}">{{ comment.author }}</a>
@@ -12,6 +16,12 @@
       <div class="commentBody">
         {{ comment.contentHtml|safe }}
       </div>
+      <div class="stat emoji" id="likes">👍 {{ comment.likeCount }} </div>
+      {% if comment['replies']['replyCount'] > 0 %} 
+        <div class="replies">
+            {{ comment.replies.replyCount }} replies 
+        </div>
+      {% endif %}
     </div>
   </div>  
   {% endfor %}

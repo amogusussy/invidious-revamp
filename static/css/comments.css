@@ -1,5 +1,5 @@
-#comments {
-  /*  */
+#under {
+  margin: 10px;
 }
 
 .comment {
@@ -7,8 +7,26 @@
   border: 2px solid var(--border);
   padding: 12px;
   width: fit-content;
+  max-width: 130ch;
+  margin: 10px 0px;
 }
 
 .user-line a {
+  color: var(--blue);
+}
+
+#commentCount {
+  margin-left: 12px;
+}
+
+.commentBody {
+  margin-bottom: 5px;
+}
+
+.replies {
+  margin-top: 5px;
+  cursor: pointer;
+  width: fit-content;
+} .replies:hover {
   color: var(--blue);
 }

@@ -110,3 +110,26 @@ hr {
   color: transparent;  
   text-shadow: 0 0 0 var(--main-fg);
 }
+
+.author, #subscribe-button{
+  display: inline-flex;
+  align-items: center;
+}
+
+.author-name {
+  margin-left: 5px;
+}
+
+.info .author img {
+  border-radius: 99999px;
+}
+
+.subscribe {
+  cursor: pointer;
+  background: var(--red);
+  color: var(--main-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+

@@ -1,5 +1,4 @@
-def readable_number(data, key):
-    value = data[key]
+def readable_number(value):
     if value < 1000:
         return f"{value}"
     elif value < 10000:
